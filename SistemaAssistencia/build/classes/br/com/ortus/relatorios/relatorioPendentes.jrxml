@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.4641000000000046"/>
+	<property name="ireport.x" value="13"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[SELECT
+     pedidosreservados.`id` AS pedidosreservados_id,
+     pedidosreservados.`biojato` AS pedidosreservados_biojato,
+     pedidosreservados.`bioscalerCB` AS pedidosreservados_bioscalerCB,
+     pedidosreservados.`bioscalerSB` AS pedidosreservados_bioscalerSB,
+     pedidosreservados.`dataEmissaoPedido` AS pedidosreservados_dataEmissaoPedido,
+     pedidosreservados.`dataEnvioPA` AS pedidosreservados_dataEnvioPA,
+     pedidosreservados.`dataPANoEstoque` AS pedidosreservados_dataPANoEstoque,
+     pedidosreservados.`dataPrevistaProducao` AS pedidosreservados_dataPrevistaProducao,
+     pedidosreservados.`detonix` AS pedidosreservados_detonix,
+     pedidosreservados.`formaEnvio` AS pedidosreservados_formaEnvio,
+     pedidosreservados.`ledLuxComFonte` AS pedidosreservados_ledLuxComFonte,
+     pedidosreservados.`nomeCliente` AS pedidosreservados_nomeCliente,
+     pedidosreservados.`numeroPedido` AS pedidosreservados_numeroPedido,
+     pedidosreservados.`obs` AS pedidosreservados_obs,
+     pedidosreservados.`ortusonicOrtus` AS pedidosreservados_ortusonicOrtus,
+     pedidosreservados.`representante` AS pedidosreservados_representante,
+     pedidosreservados.`soniII` AS pedidosreservados_soniII,
+     pedidosreservados.`status` AS pedidosreservados_status
+FROM
+     `pedidosreservados` pedidosreservados WHERE status='Pendente' OR status='Em Estoque']]>
+	</queryString>
+	<field name="pedidosreservados_id" class="java.lang.Integer"/>
+	<field name="pedidosreservados_biojato" class="java.lang.Integer"/>
+	<field name="pedidosreservados_bioscalerCB" class="java.lang.Integer"/>
+	<field name="pedidosreservados_bioscalerSB" class="java.lang.Integer"/>
+	<field name="pedidosreservados_dataEmissaoPedido" class="java.sql.Date"/>
+	<field name="pedidosreservados_dataEnvioPA" class="java.sql.Date"/>
+	<field name="pedidosreservados_dataPANoEstoque" class="java.sql.Date"/>
+	<field name="pedidosreservados_dataPrevistaProducao" class="java.sql.Date"/>
+	<field name="pedidosreservados_detonix" class="java.lang.Integer"/>
+	<field name="pedidosreservados_formaEnvio" class="java.lang.String"/>
+	<field name="pedidosreservados_ledLuxComFonte" class="java.lang.Integer"/>
+	<field name="pedidosreservados_nomeCliente" class="java.lang.String"/>
+	<field name="pedidosreservados_numeroPedido" class="java.lang.Integer"/>
+	<field name="pedidosreservados_obs" class="java.lang.String"/>
+	<field name="pedidosreservados_ortusonicOrtus" class="java.lang.Integer"/>
+	<field name="pedidosreservados_representante" class="java.lang.String"/>
+	<field name="pedidosreservados_soniII" class="java.lang.Integer"/>
+	<field name="pedidosreservados_status" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="75" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="71"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="136" y="0" width="666" height="71"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="310" y="22" width="319" height="23"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pedidos Pendentes e com Produtos em Estoque]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="136" height="71"/>
+				<imageExpression><![CDATA["\\\\SERVIDOR\\Publico\\Programas\\desenvolvimento\\novo\\SistemaAssistencia\\src\\br\\com\\ortus\\icones\\logonova.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="18" backcolor="#000000"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<elementGroup>
+				<staticText>
+					<reportElement x="403" y="0" width="33" height="18" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Biojato]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="276" y="0" width="78" height="18" forecolor="#FFFFFF"/>
+					<textElement>
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Representante]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="548" y="0" width="35" height="18" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[LedLux]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="0" y="0" width="46" height="18" forecolor="#FFFFFF"/>
+					<textElement>
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Pedido]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="630" y="0" width="47" height="18" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Soni II]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="583" y="0" width="47" height="18" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri" size="11" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Ortusonic]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="677" y="0" width="125" height="18" forecolor="#FFFFFF"/>
+					<textElement>
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Obs.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="46" y="0" width="230" height="18" forecolor="#FFFFFF"/>
+					<textElement>
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Cliente]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="354" y="0" width="49" height="18" forecolor="#FFFFFF"/>
+					<textElement>
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Emissão]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="436" y="0" width="35" height="18" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri" size="11" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Bs C/B]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="506" y="0" width="42" height="18" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri" size="11" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Detonix]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="471" y="0" width="35" height="18" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Bs s/B]]></text>
+				</staticText>
+			</elementGroup>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="797" height="18"/>
+				<textField>
+					<reportElement x="2" y="0" width="44" height="18"/>
+					<textElement>
+						<font fontName="Calibri"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pedidosreservados_numeroPedido}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="46" y="0" width="230" height="18"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pedidosreservados_nomeCliente}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="276" y="0" width="78" height="18"/>
+					<textElement>
+						<font fontName="Calibri"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pedidosreservados_representante}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="354" y="0" width="49" height="18"/>
+					<textElement>
+						<font fontName="Calibri"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pedidosreservados_dataEmissaoPedido}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="403" y="0" width="33" height="18"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pedidosreservados_biojato}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="436" y="0" width="35" height="18"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pedidosreservados_bioscalerCB}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="471" y="0" width="35" height="18"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pedidosreservados_bioscalerSB}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="506" y="0" width="42" height="18"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pedidosreservados_detonix}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="548" y="0" width="35" height="18"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pedidosreservados_ledLuxComFonte}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="583" y="0" width="46" height="18"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pedidosreservados_ortusonicOrtus}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="630" y="0" width="47" height="18"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Calibri" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pedidosreservados_soniII}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="677" y="0" width="120" height="18"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{pedidosreservados_obs}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="802" height="25" forecolor="#D0B48E" backcolor="#000000"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="757" y="3" width="40" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Calibri" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="677" y="3" width="80" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Calibri" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Pagina "+$V{PAGE_NUMBER}+" de "]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="3" width="197" height="20" forecolor="#FFFFFF"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Calibri" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

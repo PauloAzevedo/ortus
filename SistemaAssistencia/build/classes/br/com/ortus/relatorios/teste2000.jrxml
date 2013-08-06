@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     pedidosreservados.`id` AS ID,
+     pedidosreservados.`biojato` AS Biojato,
+     pedidosreservados.`bioscalerCB` AS BioscalerCB,
+     pedidosreservados.`bioscalerSB` AS BioscalerSB,
+     pedidosreservados.`dataEmissaoPedido` AS Emissao,
+     pedidosreservados.`dataEnvioPA` AS Envio,
+     pedidosreservados.`dataPANoEstoque` AS PA_No_Estoque,
+     pedidosreservados.`dataPrevistaProducao` AS Previsao_Produçao,
+     pedidosreservados.`detonix` AS Detonix,
+     pedidosreservados.`formaEnvio` AS Forma,
+     pedidosreservados.`ledLuxComFonte` AS Led,
+     pedidosreservados.`nomeCliente` AS Cliente,
+     pedidosreservados.`numeroPedido` AS Pedido,
+     pedidosreservados.`obs` AS Obs,
+     pedidosreservados.`ortusonicOrtus` AS Ortusonic,
+     pedidosreservados.`representante` AS Representante,
+     pedidosreservados.`soniII` AS Soni,
+     pedidosreservados.`status` AS Status
+FROM
+     `pedidosreservados` pedidosreservados]]>
+	</queryString>
+	<field name="ID" class="java.lang.Integer"/>
+	<field name="Biojato" class="java.lang.Integer"/>
+	<field name="BioscalerCB" class="java.lang.Integer"/>
+	<field name="BioscalerSB" class="java.lang.Integer"/>
+	<field name="Emissao" class="java.sql.Date"/>
+	<field name="Envio" class="java.sql.Date"/>
+	<field name="PA_No_Estoque" class="java.sql.Date"/>
+	<field name="Previsao_Produçao" class="java.sql.Date"/>
+	<field name="Detonix" class="java.lang.Integer"/>
+	<field name="Forma" class="java.lang.String"/>
+	<field name="Led" class="java.lang.Integer"/>
+	<field name="Cliente" class="java.lang.String"/>
+	<field name="Pedido" class="java.lang.Integer"/>
+	<field name="Obs" class="java.lang.String"/>
+	<field name="Ortusonic" class="java.lang.Integer"/>
+	<field name="Representante" class="java.lang.String"/>
+	<field name="Soni" class="java.lang.Integer"/>
+	<field name="Status" class="java.lang.String"/>
+	<group name="ID">
+		<groupExpression><![CDATA[$F{ID}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="121" height="79"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="121" y="0" width="268" height="79"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="389" y="0" width="166" height="79"/>
+			</rectangle>
+			<image>
+				<reportElement x="0" y="0" width="121" height="79"/>
+				<imageExpression><![CDATA["G:\\EstudosEFaculdade\\UTFPR\\2012\\Dropbox\\ti\\SistemaAssistencia\\src\\br\\com\\ortus\\icones\\logonova.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="193" y="26" width="160" height="33"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Assistência]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="443" y="59" width="112" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="477" y="0" width="54" height="17"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="531" y="0" width="24" height="17"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
