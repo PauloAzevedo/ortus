@@ -1446,8 +1446,9 @@ public class JDialogPedidosReservados extends javax.swing.JDialog {
         PedidosReservadosDao pDao = new PedidosReservadosDao();
         DefaultTableModel model = new DefaultTableModel();
         model.setColumnIdentifiers(new String[]{"Emissão", "Pedido", "Cliente", "Representante", "Biojato", "Bios. CB", "Bios. SB", "Soni I", "Soni II", "Led I", "Led II", "Kit Led", "Kit Ortusonic", "Kit Jato", "Envio", "Data Prevista", "Obs.", "Entrega PA", "Envio PA"});
+        
         pedidosEnviados = pDao.obterTrocas("Enviado");
-
+        Collections.reverse(pedidosEnviados);
         if (pedidosEnviados != null) {
             for (PedidosReservados pedido : pedidosEnviados) {
                 model.addRow(new Object[]{pedido.getDataEmissaoPedido(), pedido.getNumeroPedido(), pedido.getNomeCliente(), pedido.getRepresentante(), pedido.getBiojato(), pedido.getBioscalerCB(), pedido.getBioscalerSB(), pedido.getSoniI(), pedido.getSoniII(), pedido.getLedLuxI(), pedido.getLedLuxII(), pedido.getKitLedLux(), pedido.getKitOrtusonic(), pedido.getKitJato(), pedido.getFormaEnvio(), pedido.getDataPrevistaProducao(), pedido.getObs(), pedido.getDataPANoEstoque(), pedido.getDataEnvioPA()});
