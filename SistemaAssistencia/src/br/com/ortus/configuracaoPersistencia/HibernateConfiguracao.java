@@ -27,6 +27,7 @@ public abstract class HibernateConfiguracao {
     private static String usuarioBase = "root";// seu nome de usuario da base de dados aqui
     private static String senhaBase = "aluno";// sua seha de usuario da base de dados aqui
     private static String baseDados = "astec";// o nome da sua base de dados aqui
+    private static String host = "192.168.1.251:3306";
 
     public static Session openConect() {
         if (cfg == null) {
@@ -35,7 +36,7 @@ public abstract class HibernateConfiguracao {
             cfg.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5InnoDBDialect");
             cfg.setProperty("hibernate.connection.username", usuarioBase);
             cfg.setProperty("hibernate.connection.password", senhaBase);
-            cfg.setProperty("hibernate.connection.url", "jdbc:mysql://192.168.1.251:3306/"+baseDados);
+            cfg.setProperty("hibernate.connection.url", "jdbc:mysql://"+host +"/"+baseDados);
             //cfg.setProperty("hibernate.connection.url", "jdbc:mysql://ortusservidor.no-ip.org:3306/"+baseDados);
             
             //cfg.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/"+baseDados);
@@ -117,6 +118,16 @@ public abstract class HibernateConfiguracao {
         }
         return classes;
     }
+
+    public static String getHost() {
+        return host;
+    }
+
+    public static void setHost(String host) {
+        HibernateConfiguracao.host = host;
+    }
+    
+    
     
     
     
