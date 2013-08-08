@@ -53,7 +53,11 @@ public class JDialogPedidosReservados extends javax.swing.JDialog {
         popularTabelaCancelados();
         popularTabelaAguardandoAprovacao();
         popularTabelaEstoquePA();
-        pintarLinhas();
+        pintarLinhasTabelaEstoquePA();
+        pintarLinhasTabelaParaEnviar();
+        pintarLinhasTabelaAguardandoAprovacao();
+        pintarLinhasTabelaEnviar();
+
         verificarUsuario();
         iniciarThreadDasTabelas();
 
@@ -610,7 +614,7 @@ public class JDialogPedidosReservados extends javax.swing.JDialog {
 
         jTabbedPane1.addTab("Para Enviar", jPanel4);
 
-        jTableAguardandoAprovacao.setBackground(new java.awt.Color(255, 204, 0));
+        jTableAguardandoAprovacao.setBackground(new java.awt.Color(205, 166, 184));
         jTableAguardandoAprovacao.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTableAguardandoAprovacao.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -2045,8 +2049,9 @@ public class JDialogPedidosReservados extends javax.swing.JDialog {
         }
     }
 
-    private void pintarLinhas() {
+    private void pintarLinhasTabelaEstoquePA() {
         jTableEstoquePA.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
+            @Override
             public Component getTableCellRendererComponent(JTable table, Object value,
                     boolean isSelected, boolean hasFocus, int row, int column) {
                 super.getTableCellRendererComponent(table, value, isSelected,
@@ -2066,6 +2071,63 @@ public class JDialogPedidosReservados extends javax.swing.JDialog {
         });
 
 
+    }
+
+    private void pintarLinhasTabelaAguardandoAprovacao() {
+        jTableAguardandoAprovacao.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
+            @Override
+            public Component getTableCellRendererComponent(JTable table, Object value,
+                    boolean isSelected, boolean hasFocus, int row, int column) {
+                super.getTableCellRendererComponent(table, value, isSelected,
+                        hasFocus, row, column);
+                if (row % 2 == 0) {
+                    setBackground(new Color(255, 255, 170));
+                    setForeground(Color.BLACK);
+                } else if (row % 2 == 1) {
+                    setBackground(Color.YELLOW);
+                    setForeground(Color.BLACK);
+                } 
+                return this;
+            }
+        });
+    }
+
+    private void pintarLinhasTabelaParaEnviar() {
+        jTableParaEnviar.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
+            @Override
+            public Component getTableCellRendererComponent(JTable table, Object value,
+                    boolean isSelected, boolean hasFocus, int row, int column) {
+                super.getTableCellRendererComponent(table, value, isSelected,
+                        hasFocus, row, column);
+                if (row % 2 == 0) {
+                    setBackground(new Color(255, 156, 118));
+                    setForeground(Color.BLACK);
+                } else if (row % 2 == 1) {
+                    setBackground(new Color(255, 210, 202));
+                    setForeground(Color.BLACK);
+                } 
+                return this;
+            }
+        });
+    }
+
+    private void pintarLinhasTabelaEnviar() {
+        jTableEnviados.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
+            @Override
+            public Component getTableCellRendererComponent(JTable table, Object value,
+                    boolean isSelected, boolean hasFocus, int row, int column) {
+                super.getTableCellRendererComponent(table, value, isSelected,
+                        hasFocus, row, column);
+                if (row % 2 == 0) {
+                    setBackground(new Color(204, 255, 204));
+                    setForeground(Color.BLACK);
+                } else if (row % 2 == 1) {
+                    setBackground(new Color(232, 255, 232));
+                    setForeground(Color.BLACK);
+                } 
+                return this;
+            }
+        });
     }
 }
 //emissão
