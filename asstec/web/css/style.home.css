@@ -1,0 +1,458 @@
+/*RESET*/
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, address, em, font, img, q, s, samp, small, strong, sub, sup, var, textarea, b, u, i, center, ol, ul, li, form, label, table, input, caption {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+/*DEFAULT CONFIGURACAO*/
+body {
+	font-family: 'Verdana', sans-serif;
+	font-size:16px;
+	background:  url(../imagens/background/background_01.jpg) #141618 50% 50% repeat-x fixed;
+}
+fieldset {
+	border: 0px;
+	padding: 0px;
+	margin: 0px;
+	clear: both;
+}
+.clear, .clear10, .clear20, .clear13, .clear30, .clear40, .clear50 {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	width:0;
+	height:0;
+}
+.clear10 {
+	height: 10px;
+}
+.clear20 {
+	height: 20px;
+}
+.clear30 {
+	height: 40px;
+}
+.clear13 {
+	height: 13px;
+}
+.clear40 {
+	height: 40px;
+}
+.clear50 {
+	height: 50px;
+}
+.clear150 {
+	height: 150px;
+}
+.clear100 {
+	height: 100px;
+}
+.clear70 {
+	height: 70px;
+}
+.center-clear {
+	width:960px;
+	margin:auto;
+}
+.center-clear > .imagem_central_topo {
+	position:absolute;
+	background:url(../imagens/background/background_center_top_01.png);
+	width:960px;
+	height:432px;
+	top:0px;
+	z-index:0;
+}
+.center-clear > .topo {
+	float:left;
+	width:960px;
+        position: relative;
+}
+.center-clear > .topo > .logo {
+	margin-top:25px;
+	float:left;
+}
+.center-clear > .topo > .utfpr_logo {
+	position:relative;
+	float:right;
+}
+
+.center-clear > .conteudo {
+	width:960px;
+	height:auto;
+	position:relative;
+}
+.center-clear > .conteudo >.top > .left {
+	background:url(../imagens/background/conteudo/left_top_01.png);
+	width:21px;
+	height:20px;
+	float:left;
+}
+.center-clear > .conteudo >.top > .right {
+	background:url(../imagens/background/conteudo/right_top_01.png);
+	width:19px;
+	height:20px;
+	float:left;
+}
+.center-clear > .conteudo >.top > .center {
+	background:url(../imagens/background/conteudo/center_top_01.png);
+	width:920px;
+	height:20px;
+	float:left;
+}
+.center-clear > .conteudo >.bottom > .left {
+	background:url(../imagens/background/conteudo/left_bottom_01.png);
+	width:21px;
+	height:20px;
+	float:left;
+}
+.center-clear > .conteudo >.bottom > .right {
+	background:url(../imagens/background/conteudo/right_bottom_01.png);
+	width:19px;
+	height:20px;
+	float:left;
+}
+.center-clear > .conteudo >.bottom > .center {
+	background:url(../imagens/background/conteudo/center_bottom_01.png);
+	width:920px;
+	height:20px;
+	float:left;
+}
+.center-clear > .conteudo >.center {
+	background:url(../imagens/background/conteudo/center_center_01.png);
+	width:960px;
+	height:auto;
+	float:left;
+	min-height:300px;
+}
+.center-clear > .conteudo >.center > .interna {
+	padding-left:25px;
+	padding-right:25px;
+	padding-top:3px;
+}
+.center-clear > .conteudo >.center > .interna > .titulo {
+	width:100%;
+	height:auto;
+}
+.center-clear > .conteudo >.center > .interna > .titulo > .pre_icon {
+	width:21px;
+	height:31px;
+	color:#f64c60;
+	float:left;
+	margin-right:5px;
+}
+.center-clear > .conteudo >.center > .interna > .titulo > .texto {
+	color:#4b1110;
+	float:left;
+	font-size:22px;
+}
+.center-clear > .conteudo >.center > .interna > .titulo > .pre_icon {
+	font-size:22px;
+}
+.center-clear > .conteudo >.center > .interna > .subtitulo {
+	color:#75a4ae;
+	clear:both;
+	margin-left:27px;
+}
+.center-clear > .conteudo >.center > .interna > .counteudo {
+	clear:both;
+	margin-left:11px;
+	font-family:Arial, Helvetica, sans-serif;
+	padding:15px;
+}
+.center-clear > .rodape {
+	width:960px;
+}
+.center-clear > .rodape > .empresa_copy {
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#828282;
+	float:left;
+	margin-left:5px;
+}
+.center-clear > .rodape > .desenvolvedores {
+	font-size:11px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#828282;
+	float:right;
+	margin-left:5px;
+	text-align:right;
+	margin-right:5px;
+}
+.center-clear > .menu_principal {
+	float:left;
+	width:960px;
+	height:68px;
+	position:relative;
+	z-index:2;
+	margin-top:-40px;
+	margin-bottom:5px;
+}
+.center-clear > .menu_principal > ul {
+	list-style:none;
+}
+.center-clear > .menu_principal > ul > li {
+	float:left;
+}
+.center-clear > .menu_principal > ul > li > a{
+	display:block;
+	height:63px;
+}
+
+
+/*MENU ESTAGIARIO*/
+
+.center-clear > .menu_principal > .estagiario > .relatorios {
+	background:url(../imagens/menu/estagiario/menu_estagiario_02.png);
+	width:143px;
+	background-position: 0px 63px;
+	height:63px;
+	cursor:pointer;
+}
+.center-clear > .menu_principal > .estagiario > .relatorios:hover {
+	background-position: 0px 0px;
+	margin-top:3px;
+}
+.center-clear > .menu_principal > .estagiario > .meus_estagios {
+	background:url(../imagens/menu/estagiario/menu_estagiario_03.png);
+	width:134px;
+	background-position: 0px 63px;
+	height:63px;
+	cursor:pointer;
+}
+.center-clear > .menu_principal > .estagiario > .meus_estagios:hover {
+	background-position: 0px 0px;
+	margin-top:3px;
+}
+.center-clear > .menu_principal > .estagiario > .meus_dados {
+	background:url(../imagens/menu/estagiario/menu_estagiario_04.png);
+	width:134px;
+	background-position: 0px 63px;
+	height:63px;
+	cursor:pointer;
+}
+.center-clear > .menu_principal > .estagiario > .meus_dados:hover {
+	background-position: 0px 0px;
+	margin-top:3px;
+}
+.center-clear > .menu_principal > .estagiario > .situacao {
+	background:url(../imagens/menu/estagiario/menu_estagiario_04.png);
+	width:135px;
+	background-position: 0px 63px;
+	height:63px;
+	cursor:pointer;
+}
+.center-clear > .menu_principal > .estagiario > .situacao:hover {
+	background-position: 0px 0px;
+	margin-top:3px;
+}
+.center-clear > .menu_principal > .estagiario > .declaracao {
+	background:url(../imagens/menu/estagiario/menu_estagiario_06.png);
+	width:133px;
+	background-position: 0px 63px;
+	height:63px;
+	cursor:pointer;
+}
+.center-clear > .menu_principal > .estagiario > .declaracao:hover {
+	background-position: 0px 0px;
+	margin-top:3px;
+}
+.center-clear > .menu_principal > .estagiario > .last {
+	background:url(../imagens/menu/estagiario/menu_estagiario_07.png);
+	width:281px;
+	background-position: 0px 63px;
+	height:63px;
+}
+
+    .estagiario .submenu {
+        padding-top: 65px;
+        opacity: 0;
+        -webkit-transition: opacity .25s ease .1s;
+        -moz-transition: opacity .25s ease .1s;
+        -o-transition: opacity .25s ease .1s;
+        -ms-transition: opacity .25s ease .1s;
+        transition: opacity .25s ease .1s;
+        list-style: none;
+    }
+
+    .estagiario li:hover > .submenu { opacity: 1; }
+
+    .estagiario .submenu li {
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .estagiario li:hover > .submenu li {
+        width: 143px;
+        height: 25px;
+        overflow: visible;
+        padding-top: 10px;
+        cursor: auto;
+
+        background:  url(../imagens/menu/submenu_02.png);
+    }
+
+    .estagiario li:hover > .submenu li.last {
+        height: 12px;
+        overflow: visible;
+        width: 143px;
+        padding: 0;
+        background:  url(../imagens/menu/submenu_03.png);
+        cursor: auto;
+    }
+    .estagiario li:hover > .submenu li.first {
+        height: 10px;
+        overflow: visible;
+        width: 143px;
+        padding: 0;
+        background:  url(../imagens/menu/submenu_01.png);
+        cursor: auto;
+    }
+
+    .estagiario .submenu li a {
+        width: 143px;
+
+        color: #4B1110;
+        border: none;
+        display: block;
+        text-align: center;
+
+    }
+    .estagiario .submenu li a:hover {
+        color: #77BACE;
+
+    }
+
+    .estagiario .submenu li:last-child a { border: none; }
+
+/*MENU COORDENADOR*/
+
+.center-clear > .menu_principal > .coordenador > .empresas {
+	background:url(../imagens/menu/coordenador/menu_coordenador_02.png);
+	width:143px;
+	background-position: 0px 63px;
+	height:63px;
+	cursor:pointer;
+}
+.center-clear > .menu_principal > .coordenador > .empresas:hover {
+	background-position: 0px 0px;
+	margin-top:3px;
+}
+.center-clear > .menu_principal > .coordenador > .estagiarios {
+	background:url(../imagens/menu/coordenador/menu_coordenador_03.png);
+	width:134px;
+	background-position: 0px 63px;
+	height:63px;
+	cursor:pointer;
+}
+.center-clear > .menu_principal > .coordenador > .estagiarios:hover {
+	background-position: 0px 0px;
+	margin-top:3px;
+}
+.center-clear > .menu_principal > .coordenador > .estagios {
+	background:url(../imagens/menu/coordenador/menu_coordenador_04.png);
+	width:134px;
+	background-position: 0px 63px;
+	height:63px;
+	cursor:pointer;
+}
+.center-clear > .menu_principal > .coordenador > .estagios:hover {
+	background-position: 0px 0px;
+	margin-top:3px;
+}
+.center-clear > .menu_principal > .coordenador > .relatorios {
+	background:url(../imagens/menu/coordenador/menu_coordenador_05.png);
+	width:135px;
+	background-position: 0px 63px;
+	height:63px;
+	cursor:pointer;
+}
+.center-clear > .menu_principal > .coordenador > .relatorios:hover {
+	background-position: 0px 0px;
+	margin-top:3px;
+}
+.center-clear > .menu_principal > .coordenador > .orientadores {
+	background:url(../imagens/menu/coordenador/menu_coordenador_06.png);
+	width:133px;
+	background-position: 0px 63px;
+	height:63px;
+	cursor:pointer;
+}
+.center-clear > .menu_principal > .coordenador > .orientadores:hover {
+	background-position: 0px 0px;
+	margin-top:3px;
+}
+.center-clear > .menu_principal > .coordenador > .last {
+	background:url(../imagens/menu/coordenador/menu_coordenador_07.png);
+	width:281px;
+	background-position: 0px 63px;
+	height:63px;
+}
+
+
+    .coordenador .submenu {
+        padding-top: 65px;
+        opacity: 0;
+        -webkit-transition: opacity .25s ease .1s;
+        -moz-transition: opacity .25s ease .1s;
+        -o-transition: opacity .25s ease .1s;
+        -ms-transition: opacity .25s ease .1s;
+        transition: opacity .25s ease .1s;
+        list-style: none;
+    }
+
+    .coordenador li:hover > .submenu { opacity: 1; }
+
+    .coordenador .submenu li {
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+        font-size: 15px;
+    }
+
+    .coordenador li:hover > .submenu li {
+        width: 143px;
+        height: 25px;
+        overflow: visible;
+        padding-top: 10px;
+        cursor: auto;
+
+        background:  url(../imagens/menu/submenu_02.png);
+    }
+
+    .coordenador li:hover > .submenu li.last {
+        height: 12px;
+        overflow: visible;
+        width: 143px;
+        padding: 0;
+        background:  url(../imagens/menu/submenu_03.png);
+        cursor: auto;
+    }
+    .coordenador li:hover > .submenu li.first {
+        height: 10px;
+        overflow: visible;
+        width: 143px;
+        padding: 0;
+        background:  url(../imagens/menu/submenu_01.png);
+        cursor: auto;
+    }
+
+    .coordenador .submenu li a {
+        width: 143px;
+
+        color: #4B1110;
+        border: none;
+        display: block;
+        text-align: center;
+
+    }
+    .coordenador .submenu li a:hover {
+        color: #77BACE;
+
+    }
+
+    .coordenador .submenu li:last-child a { border: none; }

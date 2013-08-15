@@ -1,0 +1,273 @@
+/* 
+    Document   : stylesTemplate
+    Created on : 15/04/2013, 11:13:15
+    Author     : Paulo Azevedo
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+/*RESET*/
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, address, em, font, img, q, s, samp, small, strong, sub, sup, var, textarea, b, u, i, center, ol, ul, li, form, label, table, input, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+/*DEFAULT CONFIGURACAO*/
+body {
+    font-family: 'Verdana', sans-serif;
+    font-size:16px;
+    background-color: #477fae;
+}
+fieldset {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    clear: both;
+}
+.clear,.clear5, .clear10, .clear20, .clear13, .clear30, .clear40, .clear50 {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    width:0;
+    height:0;
+}
+.clear5 {
+    height: 5px;
+}
+.clear10 {
+    height: 10px;
+}
+.clear20 {
+    height: 20px;
+}
+.clear30 {
+    height: 40px;
+}
+.clear13 {
+    height: 13px;
+}
+.clear40 {
+    height: 40px;
+}
+.clear50 {
+    height: 50px;
+}
+.clear150 {
+    height: 150px;
+}
+.clear100 {
+    height: 100px;
+}
+.clear70 {
+    height: 70px;
+}
+.center-clear {
+    width:960px;
+    margin:auto;
+}
+
+.center-clear > #pagina{  
+    position:absolute;
+    width:960px;
+    top:0px;
+    z-index:0;
+}
+
+#cabecalho{
+    background: url(../imagens/pagina/backTopo.jpg);
+    height: 108px;
+    background-repeat: repeat-x;
+}
+
+#logo{
+    background: url(../imagens/pagina/logo.png);
+    width: 276px;
+    height: 76px;
+    background-repeat: no-repeat;
+    margin-left: 40px;
+    float: left;
+
+}
+
+#dentroCabecalho{
+    width: 960px;
+    margin:auto;
+    padding-top: 30px;
+}
+
+#usuario{
+    background: url(../imagens/pagina/fundoCheckin.jpg);
+    width: 233px;
+    height: 61px;
+    float: right;
+    font-size: 0.7em;
+    color: #f1f1f1;
+    font-weight: bold;    
+}
+
+#menuPrincipal{
+    background: url(../imagens/pagina/backMenu.jpg);
+    width: 960px;
+    height: 35px;
+    background-repeat: repeat-x;
+}
+
+#conteudo{
+    margin: auto;
+    width: 960px;
+    height: 100%;
+    background-color:#f1f1f1;
+}
+
+
+#rodape{
+    background: url(../imagens/pagina/backRodape1.jpg);
+    background-repeat: repeat-x;
+    height: 108px;
+}
+
+#conteudoReal{
+    min-height: 200px;
+    background-color:#ffffff;   
+    margin: 10px;
+}
+
+#dentroRodape{
+    margin: auto;
+    width: 960px;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 11px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#direitos{
+    float: left;
+}
+#autor{
+    float: right;
+}
+
+/*------------------------------------*
+    MENU
+*------------------------------------*/
+nav {
+    clear:both;
+    color:#FFF;
+    height:25px;
+    padding:5px;
+    font-weight: nornal;
+    font-size: 0.8em;
+    margin:50px 0;
+}
+nav ul {
+    padding:0;
+    margin:0;
+    list-style: none;
+    float: left;
+}
+nav ul li {
+    display: block;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+}
+nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+    padding:5px;
+    display:block;
+    margin:0;
+    float: left;
+}
+nav ul li a:hover {
+    background: #477fae;
+    color: #fff;
+}
+nav .current-menu-item a {
+    background: #FFF;
+    color: #666;
+}
+nav ul li ul {
+    display: none;
+    float: none;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    border: solid 1px #000;
+}
+nav ul li:hover > ul {
+    display: block;
+}
+nav ul li ul li,
+nav ul li ul li a {
+    float: none;
+    background: #444;
+    color: #CCC;
+}
+nav ul li ul li a:hover {
+    float: none;
+    background: #FFF;
+    color: #666;
+}
+nav ul li ul li {
+    margin: 0;
+}
+nav ul li ul li ul {
+    left: 100%;
+    top: 0;
+}
+
+input{
+    width: 300px;
+    height: 30px;
+    border-color: #477fae;
+    border: 1px solid;
+}
+
+#botao{
+    background: url(../imagens/pagina/fundoBotao.jpg);
+    background-repeat: repeat-x;
+    height: 26px;
+    border: 0px;
+    color: #FFF;
+    font-weight: bold;
+    
+}
+
+#formulario{
+    margin-left: 300px;
+}
+
+.texto_usuario{
+    color: #DB9B00;
+}
+
+#dentroUsuario{
+    margin: 10px;
+}
+
+
+#logout{
+    background: url(../imagens/pagina/logout.png);
+    width: 16px;
+    height: 16px;
+    border: 0px;      
+}
+#esquerda{
+    float: left;
+}
+
+#direita{
+    float: right
+}
+
+#imagem{
+    margin-left: 50px;
+}
